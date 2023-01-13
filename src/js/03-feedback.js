@@ -10,10 +10,10 @@ insertWithLS();
 feedbackForm.addEventListener('submit', submitForm);
 
 function submitForm(evt) {
-  if (evt.target.email.value === '' || evt.target.message.value === '') {
-    return;
-  }
   evt.preventDefault();
+    if (evt.target.email.value === '' || evt.target.message.value === '') {
+      return;
+    }
   evt.target.reset();
   console.log(localObject);
   localStorage.removeItem(STORAGE_KEY);
